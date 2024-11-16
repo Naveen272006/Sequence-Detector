@@ -29,7 +29,7 @@ Save and Document Results:
 Capture the waveforms and include the results in the final report.
 
 Verilog Code for Sequence Detector Using Moore FSM
-
+````
 module fsm_sequence(
     input clk,
     input reset,
@@ -81,13 +81,14 @@ module fsm_sequence(
     end
 
 endmodule
-
-OUTPUT:![MOORE 1](https://github.com/user-attachments/assets/6a4c6cef-ddbe-4999-97a3-5cd3e6a610a6)
+`````
+#OUTPUT
+![MOORE 1](https://github.com/user-attachments/assets/6a4c6cef-ddbe-4999-97a3-5cd3e6a610a6)
 
 
 
 Verilog Code for Sequence Detector Using Mealy FSM
-
+`````
 module mealy(clk,rst,inp,out);
  input clk, rst, inp;
  output out;
@@ -158,15 +159,16 @@ module mealy(clk,rst,inp,out);
          end
  end
  endmodule
-
- OUTPUT:![melay](https://github.com/user-attachments/assets/36ea4972-6980-4df2-9ea7-c9cf6088e88b)
+`````
+ #OUTPUT
+ ![melay](https://github.com/user-attachments/assets/36ea4972-6980-4df2-9ea7-c9cf6088e88b)
 
 
 Testbench for Sequence Detector (Moore and Mealy FSMs)
 
 TESTBENCH FOR MOORE CODE:
 
-
+`````
 module tb_fsm_sequence;
 
     // Testbench signals
@@ -218,11 +220,12 @@ module tb_fsm_sequence;
     end
 
 endmodule
-
-OUTPUT:![testbench for moore](https://github.com/user-attachments/assets/99a17c38-9008-4f06-acd7-f808a002c63f)
+`````
+#OUTPUT
+![testbench for moore](https://github.com/user-attachments/assets/99a17c38-9008-4f06-acd7-f808a002c63f)
 
 TESTBENCH FOR MELAY CODE:
-
+``````
 // directly test values given
  
 `timescale 1ns/1ns
@@ -276,8 +279,9 @@ TESTBENCH FOR MELAY CODE:
  end
 
  endmodule
-
-OUTPUT:![testbench for melay](https://github.com/user-attachments/assets/68f53dab-e525-4b9c-a5b7-5bd7a0f5d7eb)
+`````
+#OUTPUT
+![testbench for melay](https://github.com/user-attachments/assets/68f53dab-e525-4b9c-a5b7-5bd7a0f5d7eb)
 
 Conclusion
 In this experiment, Moore and Mealy FSMs were successfully designed and simulated to detect the sequence 1011. Both designs worked as expected, with the main difference being that the Moore FSM generated the output based on the current state, while the Mealy FSM generated the output based on both the current state and input. The testbench verified the functionality of both FSMs, demonstrating that the Verilog HDL can effectively model both types of state machines for sequence detection tasks.
